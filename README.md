@@ -1,7 +1,7 @@
 # SimpleTimer for Arduino
 
-This is a fork of the SimpleTimer library from Marcello Romani (http://playground.arduino.cc/Code/SimpleTimer). Sadly there is no original repository to apply pull requests.
+Forked repository to manage timers that run callbacks.
 
-## Additional Features
+It now offer a light mode to consume less ram/code.
 
-* Support lambda-expressions / std::function callbacks
+
