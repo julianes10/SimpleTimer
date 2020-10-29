@@ -1,3 +1,14 @@
+/***********************************/
+/* CONDITIONAL COMPILATION ITEMS   */
+// SIMPLETIMER_ENABLE_10
+// SIMPLETIMER_ENABLE_5
+// SIMPLETIMER_ENABLE_4
+// SIMPLETIMER_ENABLE_3
+// SIMPLETIMER_ENABLE_2
+// SIMPLETIMER_ENABLE_1
+/***********************************/
+
+
 /*
  * SimpleTimer.h
  *
@@ -47,8 +58,22 @@ typedef void (*timer_callback)();
 class SimpleTimer {
 
 public:
+#ifdef SIMPLETIMER_ENABLE_10
     // maximum number of timers
     const static int MAX_TIMERS = 10;
+#elif SIMPLETIMER_ENABLE_5
+    const static int MAX_TIMERS = 5;
+#elif SIMPLETIMER_ENABLE_4
+    const static int MAX_TIMERS = 3;
+#elif SIMPLETIMER_ENABLE_3
+    const static int MAX_TIMERS = 3;
+#elif SIMPLETIMER_ENABLE_2
+    const static int MAX_TIMERS = 2;
+#elif SIMPLETIMER_ENABLE_1
+    const static int MAX_TIMERS = 1;
+#endif
+
+
 
     // setTimer() constants
     const static int RUN_FOREVER = 0;
